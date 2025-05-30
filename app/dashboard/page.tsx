@@ -19,60 +19,60 @@ const teamComposition = [
 // Current team members organized by batting order
 const team = [
   {
-    "name": "Devon Conway",
-    "role": "Wicketkeeper Batter",
-    "type": "indian",
-    "position": "Opener",
-    "image": "",
-    "number": 88,
-    "stats": { "runs": 1500, "average": 45.2, "strikeRate": 135.4 }
+    name: "Devon Conway",
+    role: "Wicket-keeper",
+    type: "Overseas",
+    position: "Opener",
+    image: "https://resources.pulse.icc-cricket.com/players/210/6361.png",
+    number: 88,
+    stats: { runs: 1248, average: 38.0, strikeRate: 131.6 }
   },
   {
-    "name": "KL Rahul",
-    "role": "Wicketkeeper Batter",
-    "type": "indian",
-    "position": "Opener",
-    "image": "",
-    "number": 1,
-    "stats": { "runs": 4300, "average": 41.2, "strikeRate": 137.1 }
+    name: "KL Rahul",
+    role: "Wicket-keeper",
+    type: "Indian",
+    position: "Opener",
+    image: "https://resources.pulse.icc-cricket.com/players/210/1125.png",
+    number: 1,
+    stats: { runs: 4163, average: 46.8, strikeRate: 134.4 }
   },
   {
-    "name": "Rachin Ravindra",
-    "role": "Allrounder",
-    "type": " Overseas",
-    "position": "Top Order",
-    "image": "",
-    "number": 8,
-    "stats": { "runs": 1100, "average": 33.5, "strikeRate": 130.7 }
+    name: "Rachin Ravindra",
+    role: "All-rounder",
+    type: "Overseas",
+    position: "Top Order",
+    image: "https://resources.pulse.icc-cricket.com/players/210/325026.png",
+    number: 8,
+    stats: { runs: 578, average: 41.3, strikeRate: 108.7 }
   },
   {
-    "name": "Mitchell Marsh",
-    "role": "Allrounder",
-    "type": "indian",
-    "position": "No. 3/4",
-    "image": "",
-    "number": 4,
-    "stats": { "runs": 1900, "average": 30.4, "strikeRate": 142.3 }
+    name: "Mitchell Marsh",
+    role: "All-rounder",
+    type: "Overseas",
+    position: "No. 3/4",
+    image: "https://resources.pulse.icc-cricket.com/players/210/7879.png",
+    number: 4,
+    stats: { runs: 2332, average: 34.3, strikeRate: 133.6 }
   },
   {
-    "name": "Glenn Phillips",
-    "role": "Batter",
-    "type": "Overseas",
-    "position": "Finisher",
-    "image": "",
-    "number": 29,
-    "stats": { "runs": 1600, "average": 34.8, "strikeRate": 148.2 }
+    name: "Glenn Phillips",
+    role: "Batter",
+    type: "Overseas",
+    position: "Finisher",
+    image: "https://resources.pulse.icc-cricket.com/players/210/9813.png",
+    number: 29,
+    stats: { runs: 1518, average: 32.3, strikeRate: 142.2 }
   },
   {
-    "name": "Liam Livingstone",
-    "role": "Allrounder",
-    "type": "indian",
-    "position": "Middle Order",
-    "image": "",
-    "number": 23,
-    "stats": { "runs": 1200, "average": 29.3, "strikeRate": 152.6 }
+    name: "Liam Livingstone",
+    role: "All-rounder",
+    type: "Overseas",
+    position: "Middle Order",
+    image: "https://resources.pulse.icc-cricket.com/players/210/3644.png",
+    number: 23,
+    stats: { runs: 828, average: 24.4, strikeRate: 144.7 }
   },
-  ]
+]
 
 
 export default function Dashboard() {

@@ -22,21 +22,33 @@ import { Input } from "@/components/ui/input"
 import { SidebarLayout } from "@/components/sidebar-layout"
 
 const allIPLPlayers = [
-  { id: "1", name: "Virat Kohli", position: "Batsman", team: "RCB", price: 15.0, points: 245, rating: 9.2 },
-  { id: "2", name: "MS Dhoni", position: "Wicket-keeper", team: "CSK", price: 12.0, points: 198, rating: 8.9 },
-  { id: "3", name: "Rohit Sharma", position: "Batsman", team: "MI", price: 16.0, points: 234, rating: 9.0 },
-  { id: "4", name: "Jasprit Bumrah", position: "Bowler", team: "MI", price: 12.0, points: 189, rating: 9.1 },
-  { id: "5", name: "Hardik Pandya", position: "All-rounder", team: "MI", price: 15.0, points: 210, rating: 8.8 },
-  { id: "6", name: "Rashid Khan", position: "Bowler", team: "GT", price: 15.0, points: 195, rating: 9.0 },
-  { id: "7", name: "KL Rahul", position: "Wicket-keeper", team: "LSG", price: 17.0, points: 220, rating: 8.7 },
-  { id: "8", name: "Andre Russell", position: "All-rounder", team: "KKR", price: 12.0, points: 180, rating: 8.6 },
-  { id: "9", name: "Sunil Narine", position: "All-rounder", team: "KKR", price: 8.0, points: 165, rating: 8.4 },
-  { id: "10", name: "Shubman Gill", position: "Batsman", team: "GT", price: 9.25, points: 175, rating: 8.3 },
-  { id: "11", name: "Pat Cummins", position: "Bowler", team: "SRH", price: 20.5, points: 160, rating: 8.9 },
-  { id: "12", name: "Rishabh Pant", position: "Wicket-keeper", team: "DC", price: 16.0, points: 200, rating: 8.5 },
-  { id: "13", name: "Yuzvendra Chahal", position: "Bowler", team: "RR", price: 6.5, points: 155, rating: 8.2 },
-  { id: "14", name: "Jos Buttler", position: "Wicket-keeper", team: "RR", price: 10.0, points: 190, rating: 8.6 },
-  { id: "15", name: "Kagiso Rabada", position: "Bowler", team: "PBKS", price: 9.25, points: 145, rating: 8.4 },
+  // Existing players (keep if you want, or remove if only new list is needed)
+  { id: "1", name: "KL Rahul", position: "Wicket-keeper", team: "LSG", price: 17.0, points: 226, rating: 8.7 },
+  { id: "2", name: "Faf du Plessis", position: "Batsman", team: "RCB", price: 7.0, points: 730, rating: 9.0 },
+  { id: "3", name: "Rovman Powell", position: "All-rounder", team: "RR", price: 7.4, points: 110, rating: 7.2 },
+  { id: "4", name: "Glenn Phillips", position: "Wicket-keeper", team: "SRH", price: 1.5, points: 150, rating: 7.5 },
+  { id: "5", name: "Sam Curran", position: "All-rounder", team: "PBKS", price: 18.5, points: 200, rating: 8.2 },
+  { id: "6", name: "Lungi Ngidi", position: "Bowler", team: "DC", price: 0.5, points: 0, rating: 6.5 },
+  { id: "7", name: "Maheesh Theekshana", position: "Bowler", team: "CSK", price: 0.7, points: 11, rating: 7.0 },
+  { id: "8", name: "Jayant Yadav", position: "All-rounder", team: "GT", price: 1.7, points: 2, rating: 6.0 },
+  { id: "9", name: "Mohammed Shami", position: "Bowler", team: "GT", price: 6.25, points: 24, rating: 8.5 },
+  { id: "10", name: "Adam Zampa", position: "Bowler", team: "RR", price: 1.5, points: 8, rating: 7.0 },
+  { id: "11", name: "Bhuvneshwar Kumar", position: "Bowler", team: "SRH", price: 4.2, points: 11, rating: 7.8 },
+  { id: "12", name: "Lockie Ferguson", position: "Bowler", team: "RCB", price: 2.0, points: 2, rating: 6.8 },
+  { id: "13", name: "Kagiso Rabada", position: "Bowler", team: "PBKS", price: 9.25, points: 11, rating: 8.4 },
+  { id: "14", name: "Khaleel Ahmed", position: "Bowler", team: "DC", price: 5.25, points: 17, rating: 7.6 },
+  { id: "15", name: "Quinton de Kock", position: "Wicket-keeper", team: "LSG", price: 6.75, points: 143, rating: 8.1 },
+  { id: "16", name: "Jos Buttler", position: "Wicket-keeper", team: "RR", price: 10.0, points: 359, rating: 8.6 },
+  { id: "17", name: "Atharva Taide", position: "Batsman", team: "PBKS", price: 0.2, points: 186, rating: 7.2 },
+  { id: "18", name: "Ishan Kishan", position: "Wicket-keeper", team: "MI", price: 15.25, points: 320, rating: 8.3 },
+  { id: "19", name: "Devdutt Padikkal", position: "Batsman", team: "LSG", price: 7.75, points: 38, rating: 7.0 },
+  { id: "20", name: "Phil Salt", position: "Wicket-keeper", team: "KKR", price: 1.5, points: 435, rating: 8.5 },
+  { id: "21", name: "Shubham Dubey", position: "Batsman", team: "RR", price: 5.8, points: 146, rating: 7.1 },
+  { id: "22", name: "Nitish Rana", position: "Batsman", team: "KKR", price: 8.0, points: 36, rating: 7.4 },
+  { id: "23", name: "Rishabh Pant", position: "Wicket-keeper", team: "DC", price: 16.0, points: 446, rating: 8.5 },
+  { id: "24", name: "Rahmanullah Gurbaz", position: "Wicket-keeper", team: "KKR", price: 0.5, points: 71, rating: 7.0 },
+  { id: "25", name: "Rahul Tripathi", position: "Batsman", team: "SRH", price: 8.5, points: 173, rating: 7.8 },
+  { id: "26", name: "Harry Brook", position: "Batsman", team: "DC", price: 4.0, points: 63, rating: 7.2 },
 ]
 
 interface SelectedPlayer {
@@ -87,6 +99,7 @@ export default function DraftPage() {
   }
 
   const handleTickClick = (player: (typeof allIPLPlayers)[0]) => {
+    
     if (remainingBudget >= player.price) {
       setSelectedPlayerForPurchase(player)
       setBuyPrice(player.price.toString())
@@ -94,7 +107,9 @@ export default function DraftPage() {
     }
   }
 
-  const handlePurchaseConfirm = () => {
+  const handlePurchaseConfirm = async() => {
+   
+
     if (selectedPlayerForPurchase && buyPrice) {
       const purchasePrice = Number.parseFloat(buyPrice)
       if (purchasePrice <= remainingBudget && purchasePrice > 0) {
@@ -104,8 +119,28 @@ export default function DraftPage() {
         }
         setSelectedPlayers((prev) => [...prev, newPlayer])
         setShowPriceDialog(false)
+        
         setSelectedPlayerForPurchase(null)
         setBuyPrice("")
+          setIsRefreshing(true)
+
+    // Simulate loading for 1 second
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+
+    // Refresh with different players from the pool
+    const currentPlayerIds = availablePlayers.map((p) => p.id)
+    const remainingPlayers = allIPLPlayers.filter(
+      (p) => !currentPlayerIds.includes(p.id) && !selectedPlayers.find((sp) => sp.id === p.id),
+    )
+
+    // Get 8 random players (mix of current and new)
+    const shuffledPlayers = [...remainingPlayers, ...availablePlayers.slice(0, 4)]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 8)
+      .filter((p) => !selectedPlayers.find((sp) => sp.id === p.id))
+
+    setAvailablePlayers(shuffledPlayers)
+    setIsRefreshing(false)
       }
     }
   }

@@ -49,7 +49,7 @@ export default function PlayerDashboard() {
         image: "https://example.com/glenn_phillips.jpg",
         role: "All-rounder",
         type: "Overseas",
-        cost: 8,
+        cost: 14,
         costGrowth: 10,
         personalData: {
         age: 27,
