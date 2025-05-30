@@ -15,143 +15,189 @@ import { useRouter } from "next/navigation"
 
 const players = [
   {
-    id: 1,
-    name: "Lionel Messi",
-    position: "Forward",
-    team: "Inter Miami",
-    price: 12.5,
-    points: 245,
-    form: "+15%",
-    avatar: "/placeholder.svg?height=60&width=60",
-    stats: {
-      goals: 23,
-      assists: 18,
-      matches: 28,
-      rating: 8.9,
-      chartData: [
-        { month: "Jan", points: 45 },
-        { month: "Feb", points: 52 },
-        { month: "Mar", points: 48 },
-        { month: "Apr", points: 61 },
-        { month: "May", points: 39 },
-      ],
-    },
+   "id": 8,
+   "name": "Glenn Phillips",
+   "position": "All-Rounder",
+   "team": "India",
+   "price": 14.0,
+   "points": 300,
+   "avatar": "https://resources.pulse.icc-cricket.com/players/284/662973.png",
+   "stats": {
+    "goals": 0,
+    "assists": 0,
+    "matches": 10,
+    "rating": 9.5,
+    "chartData": [
+      { "month": "January", "points": 80 },
+      { "month": "February", "points": 90 },
+      { "month": "March", "points": 100 },
+      { "month": "April", "points": 80 },
+      { "month": "May", "points": 50 }
+    ]
+   }
   },
   {
-    id: 2,
-    name: "Kevin De Bruyne",
-    position: "Midfielder",
-    team: "Manchester City",
-    price: 11.8,
-    points: 198,
-    form: "+8%",
-    avatar: "/placeholder.svg?height=60&width=60",
-    stats: {
-      goals: 12,
-      assists: 25,
-      matches: 32,
-      rating: 8.7,
-      chartData: [
-        { month: "Jan", points: 38 },
-        { month: "Feb", points: 42 },
-        { month: "Mar", points: 55 },
-        { month: "Apr", points: 35 },
-        { month: "May", points: 28 },
-      ],
-    },
+   "id": 1,
+   "name": "Ravichandran Ashwin",
+   "position": "All-Rounder",
+   "team": "India",
+   "price": 9.75,
+   "points": 210,
+   "form": "",
+   "avatar": "https://www.iplt20.com/assets/images/players/8.png",
+   "stats": {
+    "goals": 0,
+    "assists": 0,
+    "matches": 9,
+    "rating": 6.5,
+    "chartData": [
+      { "month": "January", "points": 30 },
+      { "month": "February", "points": 25 },
+      { "month": "March", "points": 40 },
+      { "month": "April", "points": 60 },
+      { "month": "May", "points": 55 }
+    ]
+   }
   },
   {
-    id: 3,
-    name: "Virgil van Dijk",
-    position: "Defender",
-    team: "Liverpool",
-    price: 9.2,
-    points: 156,
-    form: "+12%",
-    avatar: "/placeholder.svg?height=60&width=60",
-    stats: {
-      goals: 4,
-      assists: 3,
-      matches: 30,
-      rating: 8.5,
-      chartData: [
-        { month: "Jan", points: 32 },
-        { month: "Feb", points: 28 },
-        { month: "Mar", points: 35 },
-        { month: "Apr", points: 31 },
-        { month: "May", points: 30 },
-      ],
-    },
+   "id": 2,
+   "name": "Rachin Ravindra",
+   "position": "All-Rounder",
+   "team": "New Zealand",
+   "price": 1.8,
+   "points": 320,
+   "form": "Outstanding performance in ICC Champions Trophy 2025.",
+   "avatar": "https://resources.pulse.icc-cricket.com/players/284/959767.png",
+   "stats": {
+    "goals": 263,
+    "assists": 0,
+    "matches": 4,
+    "rating": 9.0,
+    "chartData": [
+      { "month": "January", "points": 50 },
+      { "month": "February", "points": 70 },
+      { "month": "March", "points": 80 },
+      { "month": "April", "points": 60 },
+      { "month": "May", "points": 60 }
+    ]
+   }
   },
   {
-    id: 4,
-    name: "Erling Haaland",
-    position: "Forward",
-    team: "Manchester City",
-    price: 13.2,
-    points: 289,
-    form: "+22%",
-    avatar: "/placeholder.svg?height=60&width=60",
-    stats: {
-      goals: 35,
-      assists: 8,
-      matches: 31,
-      rating: 9.1,
-      chartData: [
-        { month: "Jan", points: 58 },
-        { month: "Feb", points: 62 },
-        { month: "Mar", points: 45 },
-        { month: "Apr", points: 68 },
-        { month: "May", points: 56 },
-      ],
-    },
+   "id": 3,
+   "name": "Sam Curran",
+   "position": "All-Rounder",
+   "team": "England",
+   "price": 7.0,
+   "points": 280,
+   "form": "Strong performance in County Championship; potential Test recall.",
+   "avatar": "https://resources.pulse.icc-cricket.com/players/284/662973.png",
+   "stats": {
+    "goals": 147,
+    "assists": 3,
+    "matches": 2,
+    "rating": 8.5,
+    "chartData": [
+      { "month": "January", "points": 40 },
+      { "month": "February", "points": 50 },
+      { "month": "March", "points": 60 },
+      { "month": "April", "points": 70 },
+      { "month": "May", "points": 60 }
+    ]
+   }
   },
   {
-    id: 5,
-    name: "Mohamed Salah",
-    position: "Forward",
-    team: "Liverpool",
-    price: 11.5,
-    points: 234,
-    form: "-3%",
-    avatar: "/placeholder.svg?height=60&width=60",
-    stats: {
-      goals: 28,
-      assists: 12,
-      matches: 33,
-      rating: 8.6,
-      chartData: [
-        { month: "Jan", points: 48 },
-        { month: "Feb", points: 52 },
-        { month: "Mar", points: 41 },
-        { month: "Apr", points: 46 },
-        { month: "May", points: 47 },
-      ],
-    },
+   "id": 4,
+   "name": "Mitchell Marsh",
+   "position": "All-Rounder",
+   "team": "Australia",
+   "price": 6.5,
+   "points": 350,
+   "form": "Explosive start to IPL 2025; consistent high scores.",
+   "avatar": "https://resources.pulse.icc-cricket.com/players/284/272450.png",
+   "stats": {
+    "goals": 267,
+    "assists": 0,
+    "matches": 5,
+    "rating": 9.2,
+    "chartData": [
+      { "month": "January", "points": 60 },
+      { "month": "February", "points": 70 },
+      { "month": "March", "points": 80 },
+      { "month": "April", "points": 70 },
+      { "month": "May", "points": 70 }
+    ]
+   }
   },
   {
-    id: 6,
-    name: "Alisson Becker",
-    position: "Goalkeeper",
-    team: "Liverpool",
-    price: 6.8,
-    points: 134,
-    form: "+5%",
-    avatar: "/placeholder.svg?height=60&width=60",
-    stats: {
-      goals: 0,
-      assists: 1,
-      matches: 29,
-      rating: 8.2,
-      chartData: [
-        { month: "Jan", points: 28 },
-        { month: "Feb", points: 25 },
-        { month: "Mar", points: 32 },
-        { month: "Apr", points: 26 },
-        { month: "May", points: 23 },
-      ],
-    },
+   "id": 5,
+   "name": "Krunal Pandya",
+   "position": "All-Rounder",
+   "team": "India",
+   "price": 4.0,
+   "points": 180,
+   "form": "Notable incident: dismissed 'hit wicket' in IPL 2025.",
+   "avatar": "https://resources.pulse.icc-cricket.com/players/284/471342.png",
+   "stats": {
+    "goals": 120,
+    "assists": 8,
+    "matches": 10,
+    "rating": 7.0,
+    "chartData": [
+      { "month": "January", "points": 30 },
+      { "month": "February", "points": 35 },
+      { "month": "March", "points": 40 },
+      { "month": "April", "points": 35 },
+      { "month": "May", "points": 40 }
+    ]
+   }
   },
+  {
+   "id": 6,
+   "name": "Kamindu Mendis",
+   "position": "All-Rounder",
+   "team": "Sri Lanka",
+   "price": 3.5,
+   "points": 150,
+   "form": "Consistent performances in domestic leagues.",
+   "avatar": "https://resources.pulse.icc-cricket.com/players/284/784373.png",
+   "stats": {
+    "goals": 64,
+    "assists": 1,
+    "matches": 1,
+    "rating": 7.5,
+    "chartData": [
+      { "month": "January", "points": 20 },
+      { "month": "February", "points": 30 },
+      { "month": "March", "points": 40 },
+      { "month": "April", "points": 30 },
+      { "month": "May", "points": 30 }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "name": "Wanindu Hasaranga",
+   "position": "Bowler",
+   "team": "Sri Lanka",
+   "price": 5.0,
+   "points": 200,
+   "form": "Effective performance in ILT20 2025.",
+   "avatar": "https://resources.pulse.icc-cricket.com/players/284/784367.png",
+   "stats": {
+    "goals": 0,
+    "assists": 2,
+    "matches": 1,
+    "rating": 8.0,
+    "chartData": [
+      { "month": "January", "points": 40 },
+      { "month": "February", "points": 40 },
+      { "month": "March", "points": 40 },
+      { "month": "April", "points": 40 },
+      { "month": "May", "points": 40 }
+    ]
+   }
+  },
+ 
 ]
 
 export default function PlayersPage() {
@@ -239,30 +285,11 @@ export default function PlayersPage() {
 
                           <div className="flex items-center gap-2">
                             <Badge variant="secondary">{player.position}</Badge>
-                            <Badge
-                              variant={player.form.startsWith("+") ? "default" : "destructive"}
-                              className={
-                                player.form.startsWith("+")
-                                  ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100"
-                                  : ""
-                              }
-                            >
-                              {player.form.startsWith("+") ? (
-                                <TrendingUp className="h-3 w-3 mr-1" />
-                              ) : (
-                                <TrendingDown className="h-3 w-3 mr-1" />
-                              )}
-                              {player.form}
-                            </Badge>
                           </div>
 
                           <div className="flex justify-between items-center pt-2">
-                            <div>
-                              <p className="text-2xl font-bold text-blue-600">{player.points}</p>
-                              <p className="text-xs text-muted-foreground">Total Points</p>
-                            </div>
                             <div className="text-right">
-                              <p className="text-lg font-semibold">${player.price}M</p>
+                              <p className="text-lg font-semibold">₹{player.price}Cr</p>
                               <p className="text-xs text-muted-foreground">Price</p>
                             </div>
                           </div>

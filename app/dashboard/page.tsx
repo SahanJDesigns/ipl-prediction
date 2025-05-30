@@ -8,13 +8,7 @@ import { Users, DollarSign, Globe, TrendingUp, Shield, Zap, Target } from "lucid
 import { motion } from "framer-motion"
 import {SidebarLayout} from "@/components/sidebar-layout"
 
-// Budget data for pie chart
-const budgetData = [
-  { name: "Used", value: 75, color: "#3b82f6" },
-  { name: "Remaining", value: 25, color: "#e5e7eb" },
-]
 
-// Team composition by role
 const teamComposition = [
   { category: "Batters", count: 7, color: "#10b981" },
   { category: "All-rounders", count: 4, color: "#f59e0b" },
@@ -24,53 +18,60 @@ const teamComposition = [
 
 // Current team members organized by batting order
 const team = [
-    {
-      name: "Rohit Sharma",
-      role: "Batter",
-      type: "Indian",
-      position: "Opener",
-      image: "/placeholder.svg?height=40&width=40",
-      stats: { runs: 597, average: 31.4, strikeRate: 130.6 },
-    },
-     {
-      name: "Rohit Sharma",
-      role: "Batter",
-      type: "Indian",
-      position: "Opener",
-      image: "/placeholder.svg?height=40&width=40",
-      stats: { runs: 597, average: 31.4, strikeRate: 130.6 },
-    }, {
-      name: "Rohit Sharma",
-      role: "Batter",
-      type: "Indian",
-      position: "Opener",
-      image: "/placeholder.svg?height=40&width=40",
-      stats: { runs: 597, average: 31.4, strikeRate: 130.6 },
-    },
-     {
-      name: "Rohit Sharma",
-      role: "Batter",
-      type: "Indian",
-      position: "Opener",
-      image: "/placeholder.svg?height=40&width=40",
-      stats: { runs: 597, average: 31.4, strikeRate: 130.6 },
-    },
-    {
-      name: "Ishan Kishan",
-      role: "Wicket-keeper",
-      type: "Indian",
-      position: "Opener",
-      image: "/placeholder.svg?height=40&width=40",
-      stats: { runs: 516, average: 34.4, strikeRate: 135.8 },
-    },
-    {
-      name: "Quinton de Kock",
-      role: "Wicket-keeper",
-      type: "Overseas",
-      position: "Top Order",
-      image: "/placeholder.svg?height=40&width=40",
-      stats: { runs: 508, average: 36.3, strikeRate: 140.2 },
-    },
+  {
+    "name": "Devon Conway",
+    "role": "Wicketkeeper Batter",
+    "type": "indian",
+    "position": "Opener",
+    "image": "",
+    "number": 88,
+    "stats": { "runs": 1500, "average": 45.2, "strikeRate": 135.4 }
+  },
+  {
+    "name": "KL Rahul",
+    "role": "Wicketkeeper Batter",
+    "type": "indian",
+    "position": "Opener",
+    "image": "",
+    "number": 1,
+    "stats": { "runs": 4300, "average": 41.2, "strikeRate": 137.1 }
+  },
+  {
+    "name": "Rachin Ravindra",
+    "role": "Allrounder",
+    "type": " Overseas",
+    "position": "Top Order",
+    "image": "",
+    "number": 8,
+    "stats": { "runs": 1100, "average": 33.5, "strikeRate": 130.7 }
+  },
+  {
+    "name": "Mitchell Marsh",
+    "role": "Allrounder",
+    "type": "indian",
+    "position": "No. 3/4",
+    "image": "",
+    "number": 4,
+    "stats": { "runs": 1900, "average": 30.4, "strikeRate": 142.3 }
+  },
+  {
+    "name": "Glenn Phillips",
+    "role": "Batter",
+    "type": "Overseas",
+    "position": "Finisher",
+    "image": "",
+    "number": 29,
+    "stats": { "runs": 1600, "average": 34.8, "strikeRate": 148.2 }
+  },
+  {
+    "name": "Liam Livingstone",
+    "role": "Allrounder",
+    "type": "indian",
+    "position": "Middle Order",
+    "image": "",
+    "number": 23,
+    "stats": { "runs": 1200, "average": 29.3, "strikeRate": 152.6 }
+  },
   ]
 
 
@@ -79,6 +80,10 @@ export default function Dashboard() {
   const battersCount = team.filter((player) => player.role === "Batter" || player.role === "Wicket-keeper").length
   const allRoundersCount = team.filter((player) => player.role === "All-rounder").length
   const bowlersCount = team.filter((player) => player.role === "Bowler").length
+  const budgetData = [
+    { name: "Used", value: 75, color: "#3b82f6" },
+    { name: "Remaining", value: 25, color: "#d1d5db" },
+  ]
 
   return (
     <SidebarLayout>
@@ -97,9 +102,9 @@ export default function Dashboard() {
             <Users className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{team.length}</div>
+            <div className="text-2xl font-bold">19</div>
             <p className="text-xs text-muted-foreground">
-              {battersCount} Batters • {allRoundersCount} All-rounders • {bowlersCount} Bowlers
+              7 Batters • 4 All-rounders • 8 Bowlers
             </p>
           </CardContent>
         </Card>
@@ -122,19 +127,8 @@ export default function Dashboard() {
             <Globe className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{overseasCount}/4</div>
-            <p className="text-xs text-muted-foreground">{4 - overseasCount} slots remaining</p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Team Balance</CardTitle>
-            <TrendingUp className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">8.5/10</div>
-            <p className="text-xs text-muted-foreground">Excellent balance</p>
+            <div className="text-2xl font-bold">{overseasCount}/8</div>
+            <p className="text-xs text-muted-foreground">{8 - overseasCount} slots remaining</p>
           </CardContent>
         </Card>
       </div>
@@ -225,7 +219,7 @@ export default function Dashboard() {
         </Card>
 
         {/* Team Composition by Role */}
-        <Card>
+        <Card >
           <CardHeader>
             <CardTitle>Team Composition</CardTitle>
             <CardDescription>Players distribution by role</CardDescription>

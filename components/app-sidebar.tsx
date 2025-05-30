@@ -43,16 +43,6 @@ const items = [
     icon: MessageSquare,
     badge: "New",
   },
-  {
-    title: "Analytics",
-    url: "/analytics",
-    icon: BarChart3,
-  },
-  {
-    title: "Draft",
-    url: "/draft",
-    icon: Target,
-  },
 ]
 
 export function AppSidebar() {
